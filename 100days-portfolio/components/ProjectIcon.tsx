@@ -1,5 +1,6 @@
 import type { Project } from "@/data/projects";
 import { ArrowIcon } from "@/components/ArrowIcon";
+import Image from "next/image";
 
 const accentClasses = {
   lime: "from-[#ddff39] to-[#b7dd00]",
@@ -31,7 +32,15 @@ export function ProjectIcon({ project }: ProjectIconProps) {
     );
   }
 
-  const iconContent = project.icon ? (
+  const iconContent = project.image ? (
+    <Image
+      alt={`${project.title}のアイコン`}
+      className="object-cover"
+      fill
+      sizes="92px"
+      src={project.image}
+    />
+  ) : project.icon ? (
     <span className="text-[clamp(1.8rem,4vw,3rem)]" aria-hidden="true">
       {project.icon}
     </span>

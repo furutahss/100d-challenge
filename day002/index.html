@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="画像をBase64文字列に変換してコピーできるブラウザ完結ツール" />
+    <link rel="icon" type="image/png" href="./favicon.png" />
+    <title>Base64画像変換</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="site-header">
+        <a class="brand" href="./" aria-label="Base64画像変換 ホーム">Base64画像変換</a>
+        <p class="privacy-note">すべてブラウザ内で処理されます</p>
+      </header>
+
+      <section class="intro" aria-labelledby="page-title">
+        <h1 id="page-title">画像をBase64に変換</h1>
+        <p class="intro-copy">画像を選択またはドロップすると、Base64形式のデータURLに変換できます。</p>
+      </section>
+
+      <section class="workspace" aria-labelledby="drop-title">
+        <div id="drop-zone" class="drop-zone" role="button" tabindex="0" aria-describedby="drop-help">
+          <input id="file-input" type="file" accept="image/*" multiple />
+          <div class="drop-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M24 33V11m0 0-8 8m8-8 8 8M10 29v8a3 3 0 0 0 3 3h22a3 3 0 0 0 3-3v-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          </div>
+          <h2 id="drop-title">画像をここへドロップ</h2>
+          <p id="drop-help">または <span>ファイルを選択</span>（複数可）</p>
+          <p class="file-hint">PNG / JPEG / GIF / WebP / SVG</p>
+        </div>
+
+        <div class="workspace-meta">
+          <p><strong id="file-count">0</strong> files encoded</p>
+          <button id="clear-button" class="text-button" type="button" disabled>すべてクリア</button>
+        </div>
+      </section>
+
+      <section class="results-section" aria-live="polite" aria-labelledby="results-title">
+        <div class="results-heading">
+          <h2 id="results-title">ENCODED FILES</h2>
+          <button id="download-button" class="download-button" type="button" disabled>テキストで保存 <span aria-hidden="true">↓</span></button>
+        </div>
+        <div id="empty-state" class="empty-state">
+          <span aria-hidden="true">⌁</span>
+          <p>変換した画像がここに表示されます</p>
+        </div>
+        <div id="results" class="results" aria-label="変換結果"></div>
+      </section>
+    </main>
+
+    <template id="result-template">
+      <article class="result-card">
+        <div class="image-preview"><img alt="" /></div>
+        <div class="result-content">
+          <div class="file-details">
+            <div><h3></h3><p class="file-meta"></p></div>
+            <button class="remove-button" type="button" aria-label="この画像を削除">×</button>
+          </div>
+          <label>BASE64 DATA URL</label>
+          <textarea class="base64-output" readonly spellcheck="false"></textarea>
+          <div class="result-actions">
+            <span class="character-count"></span>
+            <button class="copy-button" type="button">コピー <span aria-hidden="true">↗</span></button>
+          </div>
+        </div>
+      </article>
+    </template>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="./app.js"></script>
+  </body>
+</html>

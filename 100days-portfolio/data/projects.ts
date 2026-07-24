@@ -31,6 +31,13 @@ const publishedProjects: Project[] = [
     accent: "blue",
     href: "https://100d.furutahss.com/base64-image-converter/",
     image: "/images/base64-image-converter.png",
+  },
+  {
+    day: 3,
+    title: "どっちが大きい？直感タップ",
+    description: "2つの数字・りんご・図形から大きいほうを素早くタップする、子ども向けの知育ゲーム。",
+    accent: "orange",
+    href: "https://100d.furutahss.com/which-is-bigger/",
   }
 ];
 

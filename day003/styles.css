@@ -1,0 +1,62 @@
+:root {
+  font-family: "Hiragino Maru Gothic ProN", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+  color: #49351f;
+  background: #fff8e9;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  min-width: 320px;
+  min-height: 100dvh;
+  margin: 0;
+  background: radial-gradient(circle at 50% 10%, #fffdf6 0, #fff8e9 53%, #fcebcf 100%);
+  -webkit-tap-highlight-color: transparent;
+}
+
+button { font: inherit; }
+button:focus-visible, a:focus-visible { outline: 4px solid #5aa8e8; outline-offset: 4px; }
+
+.game-shell {
+  width: min(100%, 760px);
+  min-height: 100dvh;
+  margin: 0 auto;
+  padding: max(18px, env(safe-area-inset-top)) clamp(18px, 5vw, 38px) max(24px, env(safe-area-inset-bottom));
+  overflow: hidden;
+}
+
+.header { display: flex; align-items: center; justify-content: space-between; min-height: 42px; }
+.home-link { color: #79522b; font-size: clamp(14px, 2.4vw, 17px); font-weight: 800; text-decoration: none; }
+.score-pill { padding: 7px 13px; border: 2px solid #f6c44c; border-radius: 999px; background: #fffdf5; color: #9d6a11; font-size: 15px; box-shadow: 0 3px 0 #f3d68d; }
+
+.screen { width: 100%; text-align: center; }
+.screen[hidden] { display: none !important; }
+.start-screen, .result-screen { display: grid; justify-items: center; align-content: center; min-height: calc(100dvh - 84px); padding-bottom: 32px; }
+.hero-illustration { position: relative; width: min(310px, 72vw); height: min(250px, 34dvh); min-height: 190px; margin-bottom: 4px; pointer-events: none; }
+.bear { position: absolute; z-index: 1; bottom: 0; left: 50%; transform: translateX(-50%); font-size: clamp(120px, 27vw, 185px); filter: drop-shadow(0 7px 0 rgba(149, 93, 42, .12)); }
+.sun { position: absolute; top: 2%; right: 6%; font-size: clamp(36px, 9vw, 56px); }
+.cloud { position: absolute; color: #fff; font-size: clamp(34px, 8vw, 48px); filter: drop-shadow(0 4px 0 rgba(196, 161, 101, .1)); }
+.cloud-one { top: 25%; left: -3%; }.cloud-two { top: 8%; left: 18%; font-size: clamp(24px, 6vw, 35px); }
+.eyebrow { margin: 0 0 6px; color: #e88c32; font-size: clamp(14px, 2.8vw, 17px); font-weight: 900; letter-spacing: .1em; }
+h1 { margin: 0; font-size: clamp(38px, 8.2vw, 62px); line-height: 1.15; letter-spacing: .04em; }
+h1 em { color: #ec7042; font-style: normal; }
+.start-copy { margin: 18px 0 24px; color: #795e41; font-size: clamp(18px, 3.8vw, 24px); font-weight: 800; line-height: 1.55; }
+.main-button { position: relative; z-index: 2; min-width: min(300px, 82vw); padding: 17px 28px 18px; border: 0; border-radius: 999px; background: #ee794d; box-shadow: 0 7px 0 #c95638, 0 10px 14px rgba(144, 80, 43, .2); color: #fffdf8; cursor: pointer; font-size: clamp(21px, 4.5vw, 27px); font-weight: 900; letter-spacing: .08em; touch-action: manipulation; pointer-events: auto; transition: transform .12s, box-shadow .12s; }
+.main-button:active { transform: translateY(6px); box-shadow: 0 1px 0 #c95638; }
+.round-note { margin: 18px 0 0; color: #9e8060; font-size: 14px; font-weight: 700; }
+
+.game-screen { padding-top: clamp(22px, 5vh, 48px); }
+.progress-row { display: flex; align-items: center; gap: 12px; width: min(580px, 100%); margin: 0 auto 26px; color: #97754f; font-size: 15px; font-weight: 900; }
+.progress-track { height: 12px; flex: 1; overflow: hidden; border-radius: 99px; background: #f1dfbd; }.progress-bar { width: 10%; height: 100%; border-radius: inherit; background: #f2b541; transition: width .28s ease; }
+.question-title { font-size: clamp(29px, 6.5vw, 47px); }.question-title em { color: #5eaa92; }
+.choices { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(14px, 3vw, 26px); width: min(620px, 100%); margin: clamp(30px, 7vh, 60px) auto 0; }
+.choice { position: relative; z-index: 1; display: grid; place-items: center; aspect-ratio: 1 / .93; min-height: 180px; padding: 14px; border: 4px solid #fffdf8; border-radius: clamp(24px, 5vw, 36px); background: #fffdf8; box-shadow: 0 8px 0 rgba(179, 129, 76, .17), 0 12px 20px rgba(128, 82, 37, .09); color: #513c25; cursor: pointer; touch-action: manipulation; pointer-events: auto; transition: transform .14s, background .14s, border-color .14s; }
+.choice:active { transform: scale(.96); }.choice:hover { transform: translateY(-3px); }.choice.correct { border-color: #78c887; background: #eaffdf; }.choice.wrong { border-color: #ef8b76; background: #ffebe6; }
+.number-value { font-size: clamp(74px, 17vw, 135px); font-weight: 900; line-height: 1; }.shape-value { width: var(--shape-size); height: var(--shape-size); max-width: 90%; max-height: 90%; border-radius: 50%; background: var(--shape-color); box-shadow: inset -10px -12px 0 rgba(0,0,0,.08); }.fruit-value { display: flex; flex-wrap: wrap; justify-content: center; align-content: center; gap: clamp(3px, .8vw, 8px); width: min(100%, 205px); font-size: clamp(28px, 6.8vw, 48px); line-height: 1; }
+.feedback { min-height: 36px; margin: 23px 0 0; color: #5b9b6b; font-size: clamp(18px, 4vw, 24px); font-weight: 900; }
+
+.result-face { margin-bottom: 8px; font-size: clamp(92px, 20vw, 145px); animation: bounce 1.2s ease-in-out infinite alternate; }.result-screen h1 { color: #ec7042; }.result-score { margin: 15px 0 6px; color: #735434; }.result-score strong { color: #ec7042; font-size: clamp(53px, 12vw, 82px); }.result-score span { font-size: clamp(16px, 3vw, 21px); font-weight: 900; }.result-message { margin: 4px 0 26px; color: #795e41; font-size: clamp(17px, 3.5vw, 21px); font-weight: 800; }
+@keyframes bounce { to { transform: translateY(-10px) rotate(5deg); } }
+
+@media (min-width: 700px) { .game-shell { padding-inline: 42px; }.hero-illustration { margin-bottom: 12px; }.choice { min-height: 245px; }.fruit-value { width: 250px; } }
+@media (max-height: 650px) and (orientation: landscape) { .start-screen, .result-screen { min-height: calc(100dvh - 60px); grid-template-columns: auto 1fr; column-gap: 30px; }.hero-illustration, .result-face { grid-row: span 6; margin: 0; }.hero-illustration { width: 230px; height: 180px; min-height: 0; }.start-copy { margin: 8px 0 14px; }.round-note { margin-top: 12px; }.game-screen { padding-top: 8px; }.choices { margin-top: 22px; }.choice { min-height: 145px; } }

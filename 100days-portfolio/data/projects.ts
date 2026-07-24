@@ -38,6 +38,7 @@ const publishedProjects: Project[] = [
     description: "2つの数字・りんご・図形から大きいほうを素早くタップする、子ども向けの知育ゲーム。",
     accent: "orange",
     href: "https://100d.furutahss.com/which-is-bigger/",
+    image: "/images/which-is-bigger.png",
   }
 ];
 

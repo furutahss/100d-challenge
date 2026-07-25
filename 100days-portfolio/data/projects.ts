@@ -39,6 +39,14 @@ const publishedProjects: Project[] = [
     accent: "orange",
     href: "https://100d.furutahss.com/which-is-bigger/",
     image: "/images/which-is-bigger.png",
+  },
+  {
+    day: 4,
+    title: "画像サイズコンバータ",
+    description: "複数の画像をブラウザ内だけで変換するWebアプリ。",
+    accent: "violet",
+    href: "https://100d.furutahss.com/image-size-converter/",
+    image: "/images/image-size-converter.svg",
   }
 ];
 

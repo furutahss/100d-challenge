@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+
+body { min-width: 320px; background: #f8fafc; color: #0f172a; }
+
+.control {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: .6rem;
+  background: #fff;
+  padding: .65rem .75rem;
+  font: inherit;
+
+  &:focus { outline: 2px solid #38bdf8; outline-offset: 2px; }
+}

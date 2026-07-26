@@ -45,3 +45,7 @@ npm run build
 - GIFなどのアニメーション画像は先頭フレームを静止画として変換します。
 - PNGはCanvas APIで画質を調整できないため、ファイルサイズ指定モードでは目標サイズまで減らせない場合があります。
 - 出力時にEXIFなどのメタデータは保持しません。
+
+## 公開
+
+https://100d.furutahss.com/image-size-converter/

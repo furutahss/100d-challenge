@@ -47,6 +47,14 @@ const publishedProjects: Project[] = [
     accent: "violet",
     href: "https://100d.furutahss.com/image-size-converter/",
     image: "/images/image-size-converter.svg",
+  },
+  {
+    day: 5,
+    title: "かずをかぞえよう",
+    description: "画面に出てくるアイテムを数え、正しい数字を選ぶ子ども向けのミニゲーム。",
+    accent: "pink",
+    href: "https://100d.furutahss.com/count-the-things/",
+    image: "/images/count-the-things.svg",
   }
 ];
 

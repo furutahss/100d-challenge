@@ -55,6 +55,14 @@ const publishedProjects: Project[] = [
     accent: "pink",
     href: "https://100d.furutahss.com/count-the-things/",
     image: "/images/count-the-things.svg",
+  },
+  {
+    day: 6,
+    title: "Markdown テーブルジェネレーター",
+    description: "Excel、Numbers、Googleスプレッドシートなどでコピーした表を貼り付け、Markdownテーブルへ変換する静的Webツール。",
+    accent: "lime",
+    href: "https://100d.furutahss.com/markdown-table-generator/",
+    image: "/images/markdown-table-generator.svg",
   }
 ];
 

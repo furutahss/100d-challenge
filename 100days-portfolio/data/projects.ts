@@ -63,6 +63,14 @@ const publishedProjects: Project[] = [
     accent: "lime",
     href: "https://100d.furutahss.com/markdown-table-generator/",
     image: "/images/markdown-table-generator.svg",
+  },
+  {
+    day: 7,
+    title: "シルエット クイズ",
+    description: "真っ黒なシルエットから動物・乗り物を当てる、幼児向けのクイズ。",
+    accent: "blue",
+    href: "https://100d.furutahss.com/silhouette-quiz/",
+    image: "/images/silhouette-quiz.svg",
   }
 ];
 

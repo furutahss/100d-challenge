@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Hiragino Maru Gothic ProN", "Hiragino Kaku Gothic ProN", sans-serif; color: #273244; }
+
+.quiz-page { min-height: 100vh; overflow: hidden; padding: 34px 16px 48px; background: radial-gradient(circle at 15% 15%, #fff7bd 0 2px, transparent 3px) 0 0 / 40px 40px, #83d9eb; position: relative; }
+.quiz-header { position: relative; z-index: 1; margin: 0 auto 22px; max-width: 650px; text-align: center; color: #fff; text-shadow: 0 2px 0 #3195b2; }
+.eyebrow { margin: 0 0 4px; font: 800 12px/1 sans-serif; letter-spacing: .2em; }
+.title-row { display: flex; justify-content: center; align-items: center; gap: 10px; }
+.title-row h1 { margin: 0; font-size: clamp(28px, 6vw, 42px); letter-spacing: .08em; }
+.quiz-header > p:last-child { margin: 12px 0 0; font-weight: 700; }
+.quiz-card, .result-card { position: relative; z-index: 1; max-width: 650px; margin: auto; padding: 22px; border: 5px solid #fff; border-radius: 32px; background: #fffdf5; box-shadow: 0 9px 0 #4fa6ba, 0 14px 30px #24738955; }
+.progress { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 10px; color: #5a7890; font-size: 14px; font-weight: 800; }
+.progress > div { height: 12px; overflow: hidden; border-radius: 999px; background: #d9edf0; }.progress i { display: block; height: 100%; border-radius: inherit; background: #f8bd40; transition: width .25s ease; }
+.quiz-card h2 { margin: 24px 0 14px; text-align: center; font-size: clamp(23px, 5vw, 31px); }
+.silhouette-stage { display: grid; place-items: center; min-height: 260px; border: 3px dashed #b8dde2; border-radius: 24px; background: #dcf6f4; }
+.silhouette, .answer-image { width: min(90%, 380px); height: 245px; }.sprite-image { display: inline-block; background-image: var(--image); background-position: center; background-repeat: no-repeat; background-size: auto var(--image-size); }.silhouette { background-color: #172235; mask-image: var(--image); mask-position: center; mask-repeat: no-repeat; mask-size: auto var(--image-size); -webkit-mask-image: var(--image); -webkit-mask-position: center; -webkit-mask-repeat: no-repeat; -webkit-mask-size: auto var(--image-size); }.answer-image { display: none; }.revealed .silhouette { display: none; }.revealed .answer-image { display: block; }
+.choices { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 20px; }.choice, .primary-button { border: 0; cursor: pointer; font: inherit; font-weight: 900; transition: transform .15s, filter .15s; }.choice:hover, .primary-button:hover { transform: translateY(-2px); filter: brightness(1.04); }.choice:focus-visible, .primary-button:focus-visible { outline: 4px solid #243c62; outline-offset: 3px; }.choice { display: flex; min-height: 64px; align-items: center; justify-content: center; gap: 5px; border-radius: 18px; box-shadow: inset 0 -5px #0002; color: #273244; }.choice .sprite-image { width: 42px; height: 42px; flex: 0 0 42px; }.choice-1 { background: #ffc957; }.choice-2 { background: #f6a4a4; }.choice-3 { background: #99dfb0; }
+.answer-panel { margin-top: 18px; text-align: center; }.answer-panel p { margin: 0 0 13px; font-size: 22px; font-weight: 900; }.correct p { color: #ed6b3b; }.incorrect p { color: #51718b; }.primary-button { min-width: 210px; padding: 15px 25px; border-radius: 999px; background: #f27949; box-shadow: inset 0 -5px #c75333; color: white; }
+.confetti { position: absolute; top: 34%; color: #fff1a5; font-size: 23px; line-height: 2.8; letter-spacing: 16px; transform: rotate(-17deg); }.confetti-left { left: 3%; }.confetti-right { right: 2%; transform: rotate(18deg); }.result-card { max-width: 510px; margin-top: 16vh; text-align: center; }.result-star { display: block; font-size: 74px; color: #ffc84a; text-shadow: 0 6px #ed9d2c; }.result-card p { font-weight: 800; color: #55748a; }.result-card h1 { margin: 8px 0; color: #f17749; font-size: clamp(32px, 9vw, 52px); }.result-copy { margin-bottom: 24px !important; }
+@media (max-width: 480px) { .quiz-page { padding-top: 22px; }.quiz-card { padding: 16px; border-radius: 24px; }.silhouette-stage { min-height: 220px; }.silhouette, .answer-image { height: 205px; }.confetti { display: none; }.choice { font-size: 15px; } }

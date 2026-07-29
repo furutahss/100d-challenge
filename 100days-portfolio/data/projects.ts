@@ -71,6 +71,14 @@ const publishedProjects: Project[] = [
     accent: "blue",
     href: "https://100d.furutahss.com/silhouette-quiz/",
     image: "/images/silhouette-quiz.svg",
+  },
+  {
+    day: 8,
+    title: "OGP-Previewer",
+    description: "既存サイトのURLを入力し、取得したOGP・Twitter Card用メタタグとSNSシェア時のカード表示を確認する静的Webツール。",
+    accent: "orange",
+    href: "https://100d.furutahss.com/ogp-previewer/",
+    image: "/images/ogp-previewer.svg",
   }
 ];
 

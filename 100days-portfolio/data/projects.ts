@@ -79,6 +79,14 @@ const publishedProjects: Project[] = [
     accent: "orange",
     href: "https://100d.furutahss.com/ogp-previewer/",
     image: "/images/ogp-previewer.svg",
+  },
+  {
+    day: 9,
+    title: "どっちがはやい？",
+    description: "2つの乗り物を見比べて、速いほうを選ぶ幼児向けのミニクイズ。",
+    accent: "violet",
+    href: "https://100d.furutahss.com/speed-quiz/",
+    image: "/images/speed-quiz.svg",
   }
 ];
 

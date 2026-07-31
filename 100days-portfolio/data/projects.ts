@@ -87,6 +87,14 @@ const publishedProjects: Project[] = [
     accent: "violet",
     href: "https://100d.furutahss.com/speed-quiz/",
     image: "/images/speed-quiz.svg",
+  },
+  {
+    day: 10,
+    title: "ダミー画像ジェネレーター",
+    description: "サイズ、背景色、ファイル形式を指定して、モックアップに使える画像をブラウザ内で生成するツール。",
+    accent: "pink",
+    href: "https://100d.furutahss.com/dummy-image-generator/",
+    image: "/images/dummy-image-generator.svg",
   }
 ];
 

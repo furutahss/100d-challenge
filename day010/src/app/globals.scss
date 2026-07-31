@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #f8f5f0; color: #302b27; font-family: Arial, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif; }
+button, input, select { font: inherit; }
+input[type="color"] { padding: 0; cursor: pointer; }
+
+@layer components {
+  .field-input { @apply mt-2 w-full rounded-xl border border-stone-200 bg-white px-3 py-2.5 text-stone-800 outline-none transition focus:border-[#ef6c4d] focus:ring-4 focus:ring-orange-100; }
+  .checkerboard { background-image: linear-gradient(45deg, #eee8e2 25%, transparent 25%), linear-gradient(-45deg, #eee8e2 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #eee8e2 75%), linear-gradient(-45deg, transparent 75%, #eee8e2 75%); background-position: 0 0, 0 8px, 8px -8px, -8px 0; background-size: 16px 16px; background-color: white; }
+}

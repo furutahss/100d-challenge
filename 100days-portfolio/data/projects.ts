@@ -95,6 +95,14 @@ const publishedProjects: Project[] = [
     accent: "pink",
     href: "https://100d.furutahss.com/dummy-image-generator/",
     image: "/images/dummy-image-generator.svg",
+  },
+  {
+    day: 11,
+    title: "タッチ・ザ・カラー",
+    description: "動き回るカラーボールから、お題と同じ色だけをタップする動体視力ゲーム。",
+    accent: "violet",
+    href: "https://100d.furutahss.com/touch-the-color/",
+    image: "/images/touch-the-color.png",
   }
 ];
 

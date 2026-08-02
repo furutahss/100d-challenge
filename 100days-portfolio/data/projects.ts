@@ -103,6 +103,14 @@ const publishedProjects: Project[] = [
     accent: "violet",
     href: "https://100d.furutahss.com/touch-the-color/",
     image: "/images/touch-the-color.png",
+  },
+  {
+    day: 12,
+    title: "カラーパレット抽出ツール",
+    description: "画像をドロップまたは選択すると、ブラウザ内で主要な5色を抽出して Hex コードを表示するツール。",
+    accent: "blue",
+    href: "https://100d.furutahss.com/image-palette-extractor/",
+    image: "/images/image-palette-extractor.svg",
   }
 ];
 

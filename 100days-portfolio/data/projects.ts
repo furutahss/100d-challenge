@@ -111,6 +111,14 @@ const publishedProjects: Project[] = [
     accent: "blue",
     href: "https://100d.furutahss.com/image-palette-extractor/",
     image: "/images/image-palette-extractor.svg",
+  },
+  {
+    day: 13,
+    title: "どうぶつ・エサやりゲーム",
+    description: "動物の口元へ正しい食べ物を届ける、全5問のブラウザゲーム。",
+    accent: "lime",
+    href: "https://100d.furutahss.com/animal-feeding-game",
+    image: "/images/animal-feeding-game.svg",
   }
 ];
 
